@@ -7,16 +7,19 @@ import Fruit from './Fruit';
 
 
 class App extends Component {
+
+  state = {count: 0, bank1: 0, bank2: 0 }
+
+  updateCounter = (e) => {
+    this.setState({count: this.state.count+1})
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-            {fruits.map(fruit => <Fruit fruit_name={fruit} /> )}
-        </p>
+          {this.state.count}
+          <button onClick={this.updateCounter}>click me!</button>
+
       </div>
     );
   }
