@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import fruits from './fruits';
-import Fruit from './Fruit';
+
 
 
 
@@ -31,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         counter: {this.state.count};
-        
+
           Hello the price of the meal is {this.state.mealPrice}
           <button onClick={this.updateCounter}>click me</button>
           <hr />
